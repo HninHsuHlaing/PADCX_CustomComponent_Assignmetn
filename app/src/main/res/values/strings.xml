@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CustomComponentProj</string>
+    <string name="tv_create_additional_pages">Create additional Pages</string>
+
+    <string-array name="Date">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thusday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+</resources>

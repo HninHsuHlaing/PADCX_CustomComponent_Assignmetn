@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvadditionalPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_create_additional_pages"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03 days | Dec 18,2019"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <com.padcx.customcomponentproj.view.component.CircleImageView
+            android:id="@+id/imgfirpeople"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/news_sample"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            app:cornerRadius="20dp"
+
+
+            />
+        <com.padcx.customcomponentproj.view.component.CircleImageView
+            android:id="@+id/imgsecondPeople"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/news_sample"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+           android:layout_marginLeft="35dp"
+            app:cornerRadius="20dp"
+
+
+            />
+        <com.padcx.customcomponentproj.view.component.CircleImageView
+            android:id="@+id/imgthirdpeople"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/news_sample"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            app:cornerRadius="20dp"
+
+
+            />
+        <com.padcx.customcomponentproj.view.component.CircleImageView
+            android:id="@+id/imgaddpeople"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/plussign"
+            android:layout_marginLeft="105dp"
+            app:cornerRadius="30dp"
+            android:scaleType="centerCrop"
+
+            />
+
+<!--        <com.padcx.customcomponentproj.view.component.CustomProgressBar-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginLeft="300dp"-->
+<!--            >-->
+
+<!--        </com.padcx.customcomponentproj.view.component.CustomProgressBar>-->
+        <com.padcx.customcomponentproj.view.component.CustomCircularProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/circularprogressbar"
+
+            android:layout_marginLeft="300dp"
+            >
+
+        </com.padcx.customcomponentproj.view.component.CustomCircularProgressBar>
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:indeterminate="false"-->
+<!--            android:max="100"-->
+<!--            android:layout_marginLeft="300dp"-->
+<!--            android:progressDrawable="@drawable/circular_progress_bar" />-->
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:backgroundTint="#EEE9E9"
+        app:cardCornerRadius="30dp"
+        >
+        <RelativeLayout
+            android:id="@+id/rviewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasks"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tvDate"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+
+                />
+            <Spinner
+                android:id="@+id/spinnerDate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300dp"
+
+
+                >
+
+            </Spinner>
+
+
+        </RelativeLayout>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvNews"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:listitem="@layout/item_news" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rctask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="60dp"
+            tools:listitem="@layout/taskitemforrecycler"
+            />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Fragment User"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textColor="#F11A1A"-->
+<!--        >-->
+
+<!--    </TextView>-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="200dp">-->
+<!--            <include layout="@layout/taskitemforrecycler"/>-->
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+<!--    </RelativeLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcFragmentUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        tools:listitem="@layout/taskitemforrecycler"
+        android:background="#E4E3E3"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>
