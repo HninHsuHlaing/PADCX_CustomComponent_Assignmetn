@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.CreateTaskActivity"
     android:orientation="vertical"
-    android:background="#201E1E"
+    android:background="#D6D3D3"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
        <com.padcx.customcomponentproj.view.component.CircleImageView
            android:layout_width="60dp"
            android:layout_height="60dp"
-           android:src="@drawable/news_sample"
+           android:src="@drawable/vector_image2"
            app:cornerRadius="30dp"
            android:scaleType="centerCrop"
            android:layout_marginTop="8dp"
@@ -79,13 +79,22 @@
 <!--            android:layout_marginLeft="10dp"-->
 
 <!--            />-->
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:hint="Name"
-            android:textColorHint="#ffffff"
+<!--        <EditText-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:hint="Name"-->
+<!--            android:textColorHint="#ffffff"-->
+<!--            />-->
+        <Spinner
+            android:id="@+id/teamspinner"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+
             />
+
 
     </LinearLayout>
 
@@ -147,24 +156,24 @@
         <com.padcx.customcomponentproj.view.component.CircleImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/news_sample"
+            android:src="@drawable/vector_image1"
             app:cornerRadius="20dp"
             android:scaleType="centerCrop"
             />
         <com.padcx.customcomponentproj.view.component.CircleImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/news_sample"
+            android:src="@drawable/vector_image4"
             app:cornerRadius="20dp"
-           android:layout_marginLeft="35dp"
+           android:layout_marginLeft="30dp"
             android:scaleType="centerCrop"
             />
         <com.padcx.customcomponentproj.view.component.CircleImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/news_sample"
+            android:src="@drawable/vector_image3"
             app:cornerRadius="20dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="60dp"
             android:scaleType="centerCrop"
             />
         <com.padcx.customcomponentproj.view.component.CircleImageView
@@ -172,7 +181,7 @@
             android:layout_height="40dp"
             android:src="@drawable/plussign"
             app:cornerRadius="20dp"
-            android:layout_marginLeft="105dp"
+            android:layout_marginLeft="90dp"
             />
 
     </RelativeLayout>
@@ -180,7 +189,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CATEGORy"
+        android:text="CATEGORY"
+        android:layout_marginLeft="10dp"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -239,9 +249,11 @@
             android:textColor="#000000" />
 
     </LinearLayout>
+
     <include
         layout="@layout/create_task_card_view"
 
-        />
+        android:layout_height="303dp"
+        android:layout_width="match_parent" />
 
 </LinearLayout>

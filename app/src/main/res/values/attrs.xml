@@ -6,6 +6,8 @@
     <declare-styleable name="CircleImageCorner">
         <attr name="cornerRadius" format="dimension"/>
         <attr name="cornerColor" format="color"/>
+        <attr name="border_width" format="dimension" />
+
 
     </declare-styleable>
 </resources>

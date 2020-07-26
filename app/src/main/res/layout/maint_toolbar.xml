@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    >
+
+    <ImageView
+        android:id="@+id/backimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        android:layout_marginLeft="10dp"
+        >
+
+    </ImageView>
+    <TextView
+        android:id="@+id/tvtitleforMainToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OMP Dashboard"
+        android:textColor="#7A7878"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/backimage"
+        android:layout_marginLeft="15dp"
+
+        >
+
+    </TextView>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_red_background"
+        android:text="InProgress"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/tvtitleforMainToolbar"
+        android:layout_marginLeft="60dp"
+        >
+
+    </Button>
+</RelativeLayout>

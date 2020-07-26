@@ -9,21 +9,28 @@ import android.widget.Spinner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.padcx.customcomponentproj.R
 import com.padcx.customcomponentproj.adapters.TaskListAdapter
+import com.padcx.customcomponentproj.data.vos.PeopleEntity
+import com.padcx.customcomponentproj.mvp.presenter.MainPresenter
+import com.padcx.customcomponentproj.mvp.presenter.MainPresenterImpl
+import com.padcx.customcomponentproj.mvp.view.MainView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.log
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),MainView {
 
 
     private lateinit var mAdapter: TaskListAdapter
+    private lateinit var mPresenter :MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mPresenter = MainPresenterImpl()
 
        // progressBar()
         spinner()
         setUpRecycler()
+        mPresenter.onUiReady(this)
 
         buttonClick()
 
@@ -48,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpRecycler() {
-        mAdapter = TaskListAdapter()
+        mAdapter = TaskListAdapter(mPresenter)
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rctask.layoutManager = linearLayoutManager
         rctask.adapter = mAdapter
@@ -96,5 +103,17 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }).start();
  //   }
+    }
+
+    override fun displayPeopleList(list: List<PeopleEntity>) {
+        mAdapter.setNewData(list.toMutableList())
+    }
+
+    override fun navigateToProfileScreen() {
+        startActivity(ProfileActivity.newIntent(this))
+    }
+
+    override fun navigateToCreateTask() {
+        startActivity(CreateTaskActivity.newIntent(this))
     }
 }

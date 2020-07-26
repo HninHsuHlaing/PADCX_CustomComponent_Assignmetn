@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="20dp"
     app:cardBackgroundColor="#FFFFFF"
-    app:cardCornerRadius="30dp"
-    app:cardElevation="30dp">
+    app:cardCornerRadius="20dp"
+    app:cardElevation="30dp"
+    android:background="@drawable/layout_design_constraint">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -27,21 +28,29 @@
                 android:textColor="#121010"
                 android:textSize="18sp" />
 
-            <com.padcx.customcomponentproj.view.component.CircleImageView
-                android:id="@+id/roundedCornerImageView"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+            <!--            <com.padcx.customcomponentproj.view.component.CircleImageView-->
+            <!--                android:id="@+id/roundedCornerImageView"-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginRight="20dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                app:srcCompat="@drawable/plussign" />-->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/plussign" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/plusicon1"
+                android:layout_marginRight="30dp"/>
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1sp"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:background="#E0E0E0" />
 
@@ -63,22 +72,22 @@
             <com.padcx.customcomponentproj.view.component.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/news_sample"
                 app:cornerRadius="20dp"
-                android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <ImageView-->
-<!--                android:id="@+id/profile"-->
-<!--                android:layout_width="50dp"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:src="@drawable/news_sample"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/imageView2"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/profile"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:src="@drawable/news_sample"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/imageView2"-->
+            <!--                app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
             <ImageView
                 android:id="@+id/profile"
@@ -86,13 +95,13 @@
                 android:layout_height="50dp"
                 android:background="@drawable/circle_button"
                 android:padding="10dp"
-                app:srcCompat="@drawable/ic_base_line_close"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.466" />
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/ic_base_line_close" />
 
             <ProgressBar
                 android:id="@+id/progressBar2"
@@ -147,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/button_background_green"
             android:padding="5dp"
             android:text="CREATE A TASK"

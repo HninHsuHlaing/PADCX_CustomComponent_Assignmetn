@@ -3,11 +3,21 @@
     <string name="tv_create_additional_pages">Create additional Pages</string>
 
     <string-array name="Date">
+        <item>Show in Days</item>
         <item>Monday</item>
         <item>Tuesday</item>
         <item>Wednesday</item>
         <item>Thusday</item>
         <item>Friday</item>
         <item>Saturday</item>
+    </string-array>
+    <string-array name="Team">
+        <item>Awsmd Tean</item>
+        <item>Monday Team</item>
+        <item>Tuesday Team</item>
+        <item>Wednesday Team</item>
+        <item>Thusday Team</item>
+        <item>Friday Team</item>
+        <item>Saturday Team</item>
     </string-array>
 </resources>

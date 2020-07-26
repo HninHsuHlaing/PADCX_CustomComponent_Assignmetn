@@ -42,6 +42,7 @@
 
         </TextView>
         <TextView
+            android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="#Design"
@@ -54,6 +55,7 @@
 
     </RelativeLayout>
     <TextView
+        android:id="@+id/tvtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact Page"
@@ -127,9 +129,10 @@
 
         </TextView>
         <com.padcx.customcomponentproj.view.component.CircleImageViewWithoutStoke
+            android:id="@+id/imageitem"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/news_sample"
+            android:src="@drawable/vector_image4"
             android:scaleType="centerCrop"
             android:layout_gravity="center"
             app:cornerRadius="20dp"

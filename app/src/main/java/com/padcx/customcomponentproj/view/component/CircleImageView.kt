@@ -16,12 +16,15 @@ class CircleImageView @JvmOverloads constructor(
 
     private var cornerRadius = 0f
     private val path = Path()
-    private val borderColor = Color.WHITE
-    private val borderWidth = 2.0f
+    private var borderColor = Color.WHITE
+    private var borderWidth = 2.0f
 
     init {
         context.withStyledAttributes(attrs, R.styleable.CircleImageCorner){
+            val attributes = context.obtainStyledAttributes(attrs, R.styleable.CircleImageCorner)
             cornerRadius = getDimension(R.styleable.CircleImageCorner_cornerRadius,0f)
+            borderColor = attributes.getColor(R.styleable.CircleImageCorner_cornerColor, Color.WHITE)
+            borderWidth = attributes.getDimension(R.styleable.CircleImageCorner_border_width, 0f)
         }
     }
     override fun onDraw(canvas: Canvas) {
